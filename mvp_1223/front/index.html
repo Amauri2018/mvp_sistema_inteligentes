@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Sistema de diagnostico de doenças cardíacas</title>
+    <link rel="icon" href="img/home_logo.jpeg" type="image/png"> 
+</head>
+
+<div id="Sobra" style="display:none;">
+    <div class="conteudo"  align="left">
+        
+        <div class="espaco"></div>
+        <section class="items">
+            <div>Nome:<p><input type="text" class="conf_campo a1" id="name"></p></div>&nbsp;
+            <div>Idade:<p></p><input type="text" class="conf_campo a2" id="age"></p></div>&nbsp;
+            <div>Sexo:<p>
+                <select class="conf_campo a2" id="sex">
+                    <option value=""></option>
+                    <option value="0">Mulher</option>
+                    <option value="1">Homem</option>
+                </select></p>
+            </div>  
+        </section> 
+
+        <section class="items">     
+            <div>Tipo dor torácica:<p>
+                <select class="conf_campo a3" id="cp">
+                    <option value=""></option>
+                    <option value="1">Angina Típica</option>
+                    <option value="2">Angina Atípica</option>
+                    <option value="3">Dor não Cardíaca</option>
+                    <option value="4">Assintomática</option>
+                </select></p>
+            </div>&nbsp;
+            <div>Pressão arterial:<p><input type="text" class="conf_campo a4" id="trestbps"></p></div>&nbsp;
+            <div>Colesterol sérico:<p><input type="text" class="conf_campo a4" id="chol"></p></div>&nbsp;
+            <div>Açucar no sangue:<p>
+                <select class="conf_campo a4" id="fbs">
+                    <option value=""></option>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select></p>
+            </div>     
+        </section> 
+
+        <section class="items">
+            <div>Eletrocardiografia:<p>
+                <select class="conf_campo a3" id="restecg">
+                    <option value=""></option>
+                    <option value="0">Normal</option>
+                    <option value="1">Anormalidades de ST-T</option>
+                    <option value="2">Hipertrofia ventricular</option>
+                </select></p>
+            </div>&nbsp;
+            <div>Frequência cardíaca:<p><input type="text" class="conf_campo a4" id="thalach"></p></div>&nbsp;
+            <div>Angina induzida:<p>
+                <select class="conf_campo a4" id="exang">
+                    <option value=""></option>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select></p>
+            </div>&nbsp;
+            <div>Depessão do segmento ST:<p><input type="text" class="conf_campo a4" id="oldpeak"></p></div>  
+        </section> 
+
+        <section class="items"> 
+            <div>Inclinação do segmento:<p><input type="text" class="conf_campo a11" id="slope"></p></div>&nbsp;
+            <div>Número de vasos:<p></p><input type="text" class="conf_campo a6" id="ca"></p></div>&nbsp;
+            <div>Thallium stress test:<p>
+                <select class="conf_campo a12" id="thal">
+                    <option value=""></option>
+                    <option value="3">Normal</option>
+                    <option value="6">Defeito fixo</option>
+                    <option value="7">Defeito reversível</option>
+                </select></p>
+            </div>   
+        </section>
+
+        <div class="espaco"></div>
+
+        <section class="items"> 
+            <div><span onclick="fecharCadastro();" class="conf_btn">Fechar</span></div>&nbsp;
+            <div><span onclick="novoCadastro();" class="conf_btn">Salvar</span></div>
+        </section>
+	</div>
+</div>
+
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/baner.png" alt="y">
+        </div>
+    </header>
+    
+   
+    <section class="items"> 
+        <div><span onclick="abrirCadastro();" class="conf_btn">Novo Cadastro</span></div>
+    </section>
+    <div class="espaco_">&nbsp;</div>
+
+    <!-- Tabela com items existentes -->
+    <section class="items">
+        <table id="myTable" class="myTable_">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+                <th>Pressão arterial</th>
+                <th>Colesterol</th>
+                <th>Açucar no sangue</th>
+                <th>Eletrocardiografia</th>
+                <th>Frequência card</th>
+                <th>Resultado</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15" height="15"></th>
+                <!-- <th><img src="img/edit.png" width="15" height="15"></th> -->
+            </tr>
+        </table>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
